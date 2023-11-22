@@ -11,34 +11,40 @@ For example: <code>/batch -100xxx</code>
 I'll handle the rest and get those links shortened or converted in a short time! 💪
 """
 
-START_MESSAGE = """Hi there {} 
+START_MESSAGE = """**Hi there {}**
 
-Send me a link or post and I'll shorten it for you!
+**I Am Profitlinks.in , Bulk Link Converter. I Can Convert Links Directly From Your Profitlinks.in Account,**
 
-To learn more about what I can do, just type /help.
+**1. Set Frist 👉**  `/base_site profitlinks.in`
+**2. Go To 👉 https://profitlinks.in/member/tools/api**
+**3. Than Copy API Key**
+**4. Than Type /shortener_api than give a single space and than paste your API Key (see example to understand more, !! Example :-**
+`/shortener_api ef87489673b3bc8928b971316fda002ab626f8d3` )
 
-Method: {}
-Shortener website: {}
-"""
+**🔗 Hit 👉 /link To Know More About How To Link profitlinks.in Account To This Bot**
+**➕ Hit 👉 /help To Get Help.**
+**➕ Hit 👉 /footer To Get Help About Adding your Custom Footer to bot.**
 
-HELP_MESSAGE = """Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
+**- Made With 🤍 & Repors Issues By @profitlinks_admin -**"""
 
-I have a ton of handy features to help you out, such as:
+HELP_MESSAGE = """"**Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.**
 
-- [Hyperlink](https://t.me/{username}) support 🔗
-- Button conversion support 🔘
-- Domain inclusion and exclusion options 🌐
-- Header and footer text support 📝
-- Replace username function 📎
-- Banner image support 🖼️
-- Batch conversion for channel admins only 📊
-- Channel support for admins only 📢
+**I have a ton of handy features to help you out, such as:**
 
-Useful commands:
+**- [Profitlinks](https://t.me/{Profitlinks7}) support 🔗**
+**- Button conversion support 🔘
+**- Domain inclusion and exclusion options 🌐
+**- Header and footer text support 📝
+**- Replace username function 📎
+**- Banner image support 🖼️
+**- Batch conversion for channel admins only 📊
+**- Channel support for admins only 📢**
 
-- /start: Start me up! You probably already used this.
-- /help: Send this message; I'll tell you more about myself!
-- /batch -100xxx: To shorten or convert all posts in your channel
+**Useful commands:**
+
+**- /start: Start me up! You probably already used this.**
+**- /help: Send this message; I'll tell you more about myself!**
+**- /batch -100xxx: To shorten or convert all posts in your channel**
 """
 
 ABOUT_TEXT = """
