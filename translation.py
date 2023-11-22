@@ -40,6 +40,9 @@ HELP_MESSAGE = """"**Hey there! My name is {firstname} and I'm a link convertor 
 **- Batch conversion for channel admins only 📊
 **- Channel support for admins only 📢**
 
+
+**- Made With 🤍 & Repors Issues By @profitlinks_admin -**
+
 **Useful commands:**
 
 **- /start: Start me up! You probably already used this.**
@@ -65,11 +68,11 @@ Current Method: {method}
     
 Methods Available:
 
-> profitlinks - Change all the links of the post to your MDisk account first and then short to {shortener} link.
+> `profitlinks` - Change all the links of the post to your MDisk account first and then short to {shortener} link.
 
 > `shortener` - Short all the links of the post to {shortener} link directly.
 
-> profitlinks - Save all the links of the post to your Mdisk account.
+> `profitlinks` - Save all the links of the post to your Mdisk account.
     
 To change method, choose it from the following options:
 """
