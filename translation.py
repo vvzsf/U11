@@ -59,11 +59,11 @@ Current Method: {method}
     
 Methods Available:
 
-> `mdlink` - Change all the links of the post to your MDisk account first and then short to {shortener} link.
+> profitlinks - Change all the links of the post to your MDisk account first and then short to {shortener} link.
 
 > `shortener` - Short all the links of the post to {shortener} link directly.
 
-> `mdisk` - Save all the links of the post to your Mdisk account.
+> profitlinks - Save all the links of the post to your Mdisk account.
     
 To change method, choose it from the following options:
 """
@@ -133,12 +133,12 @@ METHOD_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "MDLINK", callback_data="change_method#mdlink"
+                "profitlinks", callback_data="change_method#mdlink"
             ),
             InlineKeyboardButton(
                 "Shortener", callback_data="change_method#shortener"
             ),
-            InlineKeyboardButton("Mdisk", callback_data="change_method#mdisk"),
+            InlineKeyboardButton("profitlinks", callback_data="change_method#mdisk"),
         ],
         [
             InlineKeyboardButton("Back", callback_data="help_command"),
@@ -154,13 +154,13 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup(
 USER_ABOUT_MESSAGE = """
 🔧 Here are the current settings for this bot:
 
-- 🌐 Shortener website: {base_site}
+- 🌐 Shortener website: {profitlinks.in}
 
 - 🧰 Method: {method}
 
 - 🔌 {base_site} API: {shortener_api}
 
-- 💾 Mdisk API: {mdisk_api}
+- 💾 profitlinks API: {profitlinks_api}
 
 - 📎 Username: @{username}
 
@@ -174,22 +174,22 @@ USER_ABOUT_MESSAGE = """
 """
 
 
-MDISK_API_MESSAGE = """To add or update your Mdisk API, \n`/mdisk_api mdisk_api`
+PROFITLINKS_API_MESSAGE = """To add or update your profitlinks API, \n`/profitlinks_api profitlinks_api`
             
-Ex: `/mdisk_api 6LZq851sXoPHugiKQq`
+Ex: `/profitlinks_api 6LZq851sXoPHugiKQq`
             
-Others Mdisk Links will be automatically changed to the API of this Mdisk account
+Others Mdisk Links will be automatically changed to the API of this profitlinks account
 
-Get your Mdisk API from @VideoToolMoneyTreebot
+Get your profitlinks API from profitlinks.in
 
-Current Mdisk API: `{}`"""
+Current profitlinks API: `{}`"""
 
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
 `/shortener_api [api]`
             
 Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
 
-Current Website: {base_site}
+Current Website: {profitlinks.in}
 
 To change your Shortener Website: /base_site
 
