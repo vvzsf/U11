@@ -2,13 +2,13 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 BATCH_MESSAGE = BATCH = """
-Need to shorten or convert links from all of your channel's posts? I've got you covered! Just make me an admin in your channel and use the following command:
+**Need to shorten or convert links from all of your channel's posts? I've got you covered! Just make me an admin in your channel and use the following command:**
 
-<code>/batch [channel id or username]</code>
+**<code>/batch [channel id or username]</code>**
 
-For example: <code>/batch -100xxx</code>
+**For example: <code>/batch -100xxx</code>**
 
-I'll handle the rest and get those links shortened or converted in a short time! 💪
+**I'll handle the rest and get those links shortened or converted in a short time! 💪**
 """
 
 START_MESSAGE = """**Hi there {}**
@@ -19,7 +19,7 @@ START_MESSAGE = """**Hi there {}**
 **2. Go To 👉 https://profitlinks.in/member/tools/api**
 **3. Than Copy API Key**
 **4. Than Type /shortener_api than give a single space and than paste your API Key (see example to understand more, !! Example :-**
-`/shortener_api ef87489673b3bc8928b971316fda002ab626f8d3` )
+`/shortener_api ef87489673b3bc8928b971316fda002ab626f8d3` **)**
 
 **🔗 Hit 👉 /link To Know More About How To Link profitlinks.in Account To This Bot**
 **➕ Hit 👉 /help To Get Help.**
