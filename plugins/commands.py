@@ -21,7 +21,7 @@ from utils import extract_link, get_me_button, get_size
 logger = logging.getLogger(__name__)
 
 user_commands = [
-    "mdisk_api",
+    "profitlinks_api",
     "shortener_api",
     "header",
     "footer",
@@ -31,15 +31,15 @@ user_commands = [
     "me",
 ]
 avl_web = [
-    "droplink.co",
-    "gplinks.in",
-    "tnlink.in",
-    "za.gl",
-    "du-link.in",
-    "viplink.in",
-    "shorturllink.in",
-    "shareus.in",
-    "earnspace.in",
+    "profitlinks.in",
+    "profitlinks.in",
+    "profitlinks.in",
+    "profitlinks.in",
+    "profitlinks.in",
+    "profitlinks.in",
+    "profitlinks.in",
+    "profitlinks.in",
+    "profitlinks.in",
 ]
 
 avl_web1 = "".join(f"- {i}\n" for i in avl_web)
@@ -125,7 +125,7 @@ async def method_handler(c: Client, m: Message):
         return await m.reply(s, reply_markup=METHOD_REPLY_MARKUP)
     elif len(cmd) == 2:
         method = cmd[1]
-        if method not in ["mdisk", "mdlink", "shortener"]:
+        if method not in ["profitlinks", "profitlinks", "shortener"]:
             return await m.reply(METHOD_MESSAGE.format(method=user["method"]))
         await update_user_info(user_id, {"method": method})
         await m.reply(f"Method updated successfully to {method}")
@@ -327,7 +327,7 @@ async def base_site_handler(bot, m: Message):
     user = await get_user(user_id)
     cmd = m.command
     site = user["base_site"]
-    text = f"`/base_site (base_site)`\n\nCurrent base site: {site}\n\n EX: `/base_site shareus.in`\n\nAvailable base sites:\n{avl_web1}\nAnd All alternate sites to droplink.co"
+    text = f"`/base_site (base_site)`\n\nCurrent base site: {site}\n\n EX: `/base_site profitlinks.in`\n\nAvailable base sites:\n{avl_web1}\nAnd All alternate sites to profitlinks.in"
     if len(cmd) == 1:
         return await m.reply(text=text, disable_web_page_preview=True)
     elif len(cmd) == 2:
