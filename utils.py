@@ -73,9 +73,9 @@ async def main_convertor_handler(
 
     # A dictionary which contains the methods to be called.
     METHODS = {
-        "profitlinks": profitlinks_api_handler,
+        "profitlinks": mdisk_api_handler,
         "shortener": replace_link,
-        "Profitlinks.in": profitlinks_convertor,
+        "Profitlinks.in": mdisk_droplink_convertor,
     }
 
     # Replacing the username with your username.
