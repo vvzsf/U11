@@ -73,9 +73,9 @@ async def main_convertor_handler(
 
     # A dictionary which contains the methods to be called.
     METHODS = {
-        "mdisk": mdisk_api_handler,
+        "profitlinks": profitlinks_api_handler,
         "shortener": replace_link,
-        "mdlink": mdisk_droplink_convertor,
+        "Profitlinks.in": profitlinks_convertor,
     }
 
     # Replacing the username with your username.
@@ -104,7 +104,7 @@ async def main_convertor_handler(
                 fileid = InputMediaPhoto(banner_image, caption=shortenedText)
 
     if message.text:
-        if user_method in ["shortener", "mdlink"] and "|" in caption:
+        if user_method in ["shortener", "profitlinks"] and "|" in caption:
             regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))\s\|\s([a-zA-Z0-9_]){,30}"
             if custom_alias := re.match(regex, caption):
                 custom_alias = custom_alias[0].split("|")
@@ -349,15 +349,15 @@ async def get_me_button(user):
 
 async def user_api_check(user):
     user_method = user["method"]
-    if user_method == "mdisk":
-        if not user["mdisk_api"]:
-            return "\n\nSet your /mdisk_api to continue..."
+    if user_method == "profitlinks":
+        if not user["profitlinks_api"]:
+            return "\n\nSet your /profitlinks_api to continue..."
     elif user_method == "shortener":
         if not user["shortener_api"]:
             return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['base_site']}"
-    elif user_method == "mdlink":
-        if not user["mdisk_api"]:
-            return "\n\nSet your /mdisk_api to continue..."
+    elif user_method == "profitlinks":
+        if not user["profitlinks_api"]:
+            return "\n\nSet your /profitlinks_api to continue..."
         if not user["shortener_api"]:
             return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['base_site']}"
     else:
@@ -384,7 +384,7 @@ async def set_commands(app):
         BotCommand("about", "Displays information about the bot."),
         BotCommand("method", "Sets your preferred method."),
         BotCommand("shortener_api", "Sets the shortener API."),
-        BotCommand("mdisk_api", "Sets the mDisk API."),
+        BotCommand("profitlinks_api", "Sets the mDisk API."),
         BotCommand("header", "Sets the header."),
         BotCommand("footer", "Sets the footer."),
         BotCommand("username", "Sets the username to replace others."),
