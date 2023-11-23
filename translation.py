@@ -45,23 +45,7 @@ HELP_MESSAGE = """"**Hey there! My name is {firstname} and I'm a link convertor 
 
 **Useful commands:**
 
-**- /start: Start me up! You probably already used this.**
-**- /help: Send this message; I'll tell you more about myself!**
-**- /batch -100xxx: To shorten or convert all posts in your channel**
-"""
-
-ABOUT_TEXT = """
-**My Details:**
-
-`🤖 Name:` ** {} **
-    
-`📝 Language:` [Python 3](https://www.python.org/)
-`🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-`👨‍💻 Developer:` [Dev](t.me/profitlinks_admin)
-`📢 Support:` [Updates](https://t.me/profitlinks7)
-`🌐 Source Code:` [TG](t.me/PyroDEVBot)
-"""
-
+**- /start: Start me up! You probably already used this.**"""
 
 METHOD_MESSAGE = """
 Current Method: {method}
@@ -96,68 +80,8 @@ Here is a list of the channels:
 
 {channels}"""
 
-
-HELP_REPLY_MARKUP = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton("Methods", callback_data="method_command"),
-            InlineKeyboardButton("Batch", callback_data="cbatch_command"),
-        ],
-        [
-            InlineKeyboardButton("Custom Alias", callback_data="alias_conf"),
-            InlineKeyboardButton("Admins", callback_data="admins_list"),
-        ],
-        [
-            InlineKeyboardButton("Channels", callback_data="channels_list"),
-            InlineKeyboardButton("Home", callback_data="start_command"),
-        ],
-    ]
-)
-
-
-ABOUT_REPLY_MARKUP = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton("Home", callback_data="start_command"),
-            InlineKeyboardButton("Help", callback_data="help_command"),
-        ],
-        [InlineKeyboardButton("Close", callback_data="delete")],
-    ]
-)
-
 START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton("Help", callback_data="help_command"),
-            InlineKeyboardButton("About", callback_data="about_command"),
-        ],
-        [
-            InlineKeyboardButton("Method", callback_data="method_command"),
-            InlineKeyboardButton("Close", callback_data="delete"),
-        ],
-    ]
-)
-
-METHOD_REPLY_MARKUP = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(
-                "profitlinks", callback_data="change_method#mdlink"
-            ),
-            InlineKeyboardButton(
-                "Shortener", callback_data="change_method#shortener"
-            ),
-            InlineKeyboardButton("profitlinks", callback_data="change_method#mdisk"),
-        ],
-        [
-            InlineKeyboardButton("Back", callback_data="help_command"),
-            InlineKeyboardButton("Close", callback_data="delete"),
-        ],
-    ]
-)
-
-BACK_REPLY_MARKUP = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("Back", callback_data="help_command")]]
+    [[InlineKeyboardButton("**<i>ᴀᴘɪ ᴋᴇʏ ⚛</i>**", url='https://profitlinks.in/member/tools/api")]]
 )
 
 USER_ABOUT_MESSAGE = """
