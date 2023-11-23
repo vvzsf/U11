@@ -81,7 +81,7 @@ Here is a list of the channels:
 {channels}"""
 
 START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("**<i>ᴀᴘɪ ᴋᴇʏ ⚛</i>**", url='https://profitlinks.in/member/tools/api")]]
+    [[InlineKeyboardButton("**ᴀᴘɪ ᴋᴇʏ ⚛**", url='https://profitlinks.in/member/tools/api")]]
 )
 
 USER_ABOUT_MESSAGE = """
