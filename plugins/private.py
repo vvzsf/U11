@@ -52,7 +52,7 @@ async def private_link_handler(c: Client, message: Message):
                 logging.error("Make sure that the bot is admin in your log channel")
             await update_stats(message, user_method)
         except Exception as e:
-            await message.reply(f" ʀᴇᴘᴏʀᴛ ɪꜱꜱᴜᴇꜱ ᴀᴅᴍɪɴ {e}:", quote=False)
+            await message.reply(f" ʀᴇᴘᴏʀᴛ ɪꜱꜱᴜᴇꜱ ᴀᴅᴍɪɴ {@profitlinks_admin}:", quote=False)
             logger.exception(e)
         finally:
             await txt.delete()
