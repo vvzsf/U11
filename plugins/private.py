@@ -50,3 +50,11 @@ async def private_link_handler(c: Client, message: Message):
                 
             except PeerIdInvalid as e:
                 logging.error("Make sure that the bot is admin in your log channel")
+            await update_stats(message, user_method)
+        except Exception as e:
+            await message.reply("𝒩𝒶𝓂𝒶𝓈𝓉𝑒 🙂", quote=False)
+            logger.exception(e)
+        finally:
+            await txt.delete()
+    except Exception as e:
+        logging.exception(e, exc_info=false)
