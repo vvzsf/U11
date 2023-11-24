@@ -127,12 +127,12 @@ ABOUT_REPLY_MARKUP = InlineKeyboardMarkup(
 START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Updates", url="t.me/arisu_007"),
-            InlineKeyboardButton("About", callback_data="about_command"),
+            InlineKeyboardButton("**ᴜᴘᴅᴀᴛᴇꜱ**", url="https://t.me/profitlinks7"),
+            InlineKeyboardButton("**ᴀᴘɪ ᴋᴇʏ**", url="https://profitlinks.in/member/tools/api"),
         ],
         [
-            InlineKeyboardButton("Method", callback_data="method_command"),
-            InlineKeyboardButton("Close", callback_data="delete"),
+            InlineKeyboardButton("**ʀᴇᴘᴏʀᴛ ɪꜱꜱᴜᴇꜱ**", url="https://t.me/profitlinks_admin"),
+            InlineKeyboardButton("**ᴄʟᴏꜱᴇ**", callback_data="delete"),
         ],
     ]
 )
