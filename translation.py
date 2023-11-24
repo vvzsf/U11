@@ -63,17 +63,17 @@ ABOUT_TEXT = """
 
 
 METHOD_MESSAGE = """
-Current Method: {method}
+**Current Method: {method}**
     
-Methods Available:
+**Methods Available:**
 
-> `profitlinks` - Change all the links of the post to your PDisk account first and then short to {shortener} link.
+**> `profitlinks` - Change all the links of the post to your PDisk account first and then short to {shortener} link.**
 
-> `shortener` - Short all the links of the post to {shortener} link directly.
+**> `shortener` - Short all the links of the post to {shortener} link directly.****
 
-> `profitlinks` - Save all the links of the post to your Pdisk account.
+**> `profitlinks` - Save all the links of the post to your Pdisk account.**
     
-Select Shortener Method 👆 To change method, choose it from the following options:
+**Select Shortener Method 👆 To change method, choose it from the following options:**
 """
 
 CUSTOM_ALIAS_MESSAGE = """For custom alias, `[link] | [custom_alias]`, Send in this format
@@ -128,11 +128,11 @@ START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton("ᴊᴏɪɴ ꜰᴏʀ ʟᴀᴛᴇꜱᴛ ᴜᴘᴅᴀᴛᴇꜱ", url="https://t.me/profitlinks7"),
-            InlineKeyboardButton("ɢᴇᴛ ᴀᴘɪ ᴋᴇʏ ʜᴇʀᴇ", url="https://profitlinks.in/member/tools/api"),
+            InlineKeyboardButton("ɢᴇᴛ ᴀᴘɪ ᴋᴇʏ", url="https://profitlinks.in/member/tools/api"),
         ],
         [
             InlineKeyboardButton("ʀᴇᴘᴏʀᴛ ɪꜱꜱᴜᴇꜱ ᴛᴏ ᴀᴅᴍɪɴ", url="https://t.me/profitlinks_admin"),
-            InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ꜱᴇᴛ ᴀᴘɪ ᴋᴇʏ", callback_data="delete"),
+            InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ꜱᴇᴛ ᴀᴘɪ ᴋᴇʏ", url="https://t.me/TechProfitlinks/8"),
         ],
     ]
 )
@@ -203,21 +203,21 @@ To change your Shortener Website: /base_site
 
 Current Shortener API: `{shortener_api}`"""
 
-HEADER_MESSAGE = """📝 To set the header text for every message caption or text, just reply with the text you want to use. You can use \\n to add a line break.
+HEADER_MESSAGE = """**📝 To set the header text for every message caption or text, just reply with the text you want to use. You can use \\n to add a line break.**
 
-🗑 To remove the header text, use the following command:
+**🗑 To remove the header text, use the following command:**
 
 `/header remove`
 
-This is a helpful way to add a consistent header to all of your messages. Enjoy! 🎉"""
+**This is a helpful way to add a consistent header to all of your messages. Enjoy! 🎉**"""
 
-FOOTER_MESSAGE = """📝 To set the footer text for every message caption or text, just reply with the text you want to use. You can use \\n to add a line break.
+FOOTER_MESSAGE = """**📝 To set the footer text for every message caption or text, just reply with the text you want to use. You can use \\n to add a line break.**
 
-🗑 To remove the footer text, use the following command:
+**🗑 To remove the footer text, use the following command:**
 
 `/footer remove`
 
-This is a helpful way to add a consistent footer to all of your messages. Enjoy! 🎉"""
+**This is a helpful way to add a consistent footer to all of your messages. Enjoy! 🎉**"""
 
 USERNAME_TEXT = """Current username: {username}
 
@@ -234,13 +234,13 @@ To remove the current username, use the following command:
 This is a helpful way to make sure that all of your posts have a consistent username. Enjoy! 📎"""
 
 BANNER_IMAGE = """
-Usage: `/banner_image image_url` or reply to any Image with this command
+**Usage:** `/banner_image image_url` **or reply to any Image with this command**
 
-This image will be automatically replaced with other images in the post
+**This image will be automatically replaced with other images in the post**
 
-To remove custom image, `/banner_image remove`
+**To remove custom image,** `/banner_image remove`
 
-Eg: `/banner_image https://www.nicepng.com/png/detail/436-4369539_movie-logo-film.png`"""
+**Eg: ** `/banner_image https://www.nicepng.com/png/detail/436-4369539_movie-logo-film.png`"""
 
 INCLUDE_DOMAIN_TEXT = """
 Use this option if you want to short only links from the following domains list.
