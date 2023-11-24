@@ -27,7 +27,7 @@ START_MESSAGE = """**Hi there {}**
 
 **- Made With 🤍 & Repors Issues By @profitlinks_admin -**"""
 
-HELP_MESSAGE = """"**Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.**
+HELP_MESSAGE = """**Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.**
 
 **I have a ton of handy features to help you out, such as:**
 
@@ -47,8 +47,7 @@ HELP_MESSAGE = """"**Hey there! My name is {firstname} and I'm a link convertor 
 
 **- /start: Start me up! You probably already used this.**
 **- /help: Send this message; I'll tell you more about myself!**
-**- /batch -100xxx: To shorten or convert all posts in your channel**
-"""
+**- /batch -100xxx: To shorten or convert all posts in your channel**"""
 
 ABOUT_TEXT = """
 **My Details:**
@@ -128,7 +127,7 @@ ABOUT_REPLY_MARKUP = InlineKeyboardMarkup(
 START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Help", callback_data="help_command"),
+            InlineKeyboardButton("Updates", url="t.me/arisu_007"),
             InlineKeyboardButton("About", callback_data="about_command"),
         ],
         [
