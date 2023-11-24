@@ -67,13 +67,13 @@ Current Method: {method}
     
 Methods Available:
 
-> `profitlinks` - Change all the links of the post to your MDisk account first and then short to {shortener} link.
+> `profitlinks` - Change all the links of the post to your PDisk account first and then short to {shortener} link.
 
 > `shortener` - Short all the links of the post to {shortener} link directly.
 
-> `profitlinks` - Save all the links of the post to your Mdisk account.
+> `profitlinks` - Save all the links of the post to your Pdisk account.
     
-To change method, choose it from the following options:
+Select Shortener Method 👆 To change method, choose it from the following options:
 """
 
 CUSTOM_ALIAS_MESSAGE = """For custom alias, `[link] | [custom_alias]`, Send in this format
