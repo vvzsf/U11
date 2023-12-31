@@ -101,11 +101,11 @@ ABOUT_TEXT = '''**Hey! My name is {firstname}.**
 **Click On Custom Alias To Create Custom Link**
 '''
 
-CUSTOM_ALIAS_MESSAGE = """For Custom Alias, `[link] | [custom_alias]`, Send in this format
+CUSTOM_ALIAS_MESSAGE = """For Custom Alias, `[link] | [custom_alias]`, **Send in this format**
 
-This feature works only in private mode only
+**This feature works only in private mode only**
 
-Ex: https://t.me/PanindiaFilmZ | PanindiaFilmZ"""
+**Ex: https://t.me/PanindiaFilmZ | PanindiaFilmZ**"""
 
 
 ADMINS_MESSAGE = """
@@ -150,50 +150,50 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup([
 ])
 
 USER_ABOUT_MESSAGE = """
-- Website: [{base_site}](https://urlshortx.com/member/tools/api)
+**- Website: [{base_site}](https://urlshortx.com/member/tools/api)**
 
-- Site Link {base_site} Current Linked API: {shortener_api}
+**- Site Link {base_site} Current Linked API: {shortener_api}**
 
-- Replace Channel Username: @{username}
+**- Replace Channel Username: @{username}**
 
-- Header Text: 
-{header_text}
+**- Header Text: **
+**{header_text}**
 
-- Footer Text: 
+**- Footer Text: **
 {footer_text}
 
-- Banner Image: {banner_image}
+**- Banner Image: {banner_image}**
 """
 
 
-SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
+SHORTENER_API_MESSAGE = """**To add or update your Shortner Website API,** 
 `/api [Your API Token]`
             
-Ex: `/api de303d5270f481aec928hug883da7b7f9a8812ac `
+**Ex:** `/api de303d5270f481aec928hug883da7b7f9a8812ac `
 
-Get API From [{base_site}](https://urlshortx.com/member/tools/api)
+**Get API From [{base_site}](https://urlshortx.com/member/tools/api)**
 
-Website: `{base_site}`
+**Website:** `{base_site}`
 
-Current API: `{shortener_api}`"""
+**Current API:** `{shortener_api}`"""
 
 HEADER_MESSAGE = """**Reply to the Header Text You Want**
 
-This Text will be added to the top of every message **caption** or text
+**This Text will be added to the top of every message caption or text**
 
-For adding **line break** use \n
-To Remove Header Text: `/header remove`"""
+**For adding line break use** \n
+**To Remove Header Text:** `/header remove`"""
 
 FOOTER_MESSAGE = """**Reply to the Footer Text You Want**
 
-This Text will be added to the **bottom** of every message **caption** or text
+**This Text will be added to the bottom of every message caption or text**
 
-For adding **line break** use \n
-To Remove Footer Text: `/footer remove`"""
+**For adding line break use** \n
+**To Remove Footer Text:** `/footer remove`"""
 
 USERNAME_TEXT = """**Hi! {}, I am Urlshortx bot, bulk link converter bot From Linked Your Urlshortx Account,**
 
-**🌟 Type** /channel (channel link or username)
+**🌟 Type** **/channel (channel link or username)**
 
 **example:**
 /channel @PanindiaFilmZ
@@ -205,13 +205,13 @@ Or
 **- Message @Arisu_0007 For More Help -**"""
 
 BANNER_IMAGE = """
-**Usage:** `/banner_image image_url` or reply to any Image with this command
+**Usage:** `/banner_image image_url` **or reply to any Image with this command**
 
-This image will be automatically replaced with other images in the post
+**This image will be automatically replaced with other images in the post**
 
-To remove custom image, `/banner_image remove`
+**To remove custom image,** `/banner_image remove`
 
-Eg: `/banner_image https://telegra.ph/file/5e96340a9147026556b387a.jpg`"""
+**Eg:** `/banner_image https://telegra.ph/file/5e96340a9147026556b387a.jpg`"""
 
 
 BANNED_USER_TXT = """
