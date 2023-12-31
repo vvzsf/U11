@@ -20,26 +20,17 @@ from utils import extract_link, get_me_button, get_size
 
 logger = logging.getLogger(__name__)
 
-user_commands = [
-    "profitlinks_api",
-    "shortener_api",
-    "header",
-    "footer",
-    "username",
-    "banner_image",
-    "base_site",
-    "me",
-]
+user_commands = ["Api", "header", "footer", "username", "banner_image", "me"]
 avl_web = [
-    "profitlinks.in",
-    "profitlinks.in",
-    "profitlinks.in",
-    "profitlinks.in",
-    "profitlinks.in",
-    "profitlinks.in",
-    "profitlinks.in",
-    "profitlinks.in",
-    "profitlinks.in",
+    "droplink.co",
+    "gplinks.in",
+    "tnlink.in",
+    "za.gl",
+    "du-link.in",
+    "viplink.in",
+    "shorturllink.in",
+    "shareus.in",
+    "earnspace.in",
 ]
 
 avl_web1 = "".join(f"- {i}\n" for i in avl_web)
@@ -84,8 +75,6 @@ async def help_command(c, m: Message):
     s = HELP_MESSAGE.format(
         firstname=temp.FIRST_NAME,
         username=temp.BOT_USERNAME,
-        repo=SOURCE_CODE,
-        owner="@ask_admin001",
     )
 
     if WELCOME_IMAGE:
@@ -112,24 +101,6 @@ async def about_command(c, m: Message):
         reply_markup=reply_markup,
         disable_web_page_preview=True,
     )
-
-
-@Client.on_message(filters.command("method") & filters.private)
-@private_use
-async def method_handler(c: Client, m: Message):
-    user_id = m.from_user.id
-    user = await get_user(user_id)
-    cmd = m.command
-    if len(cmd) == 1:
-        s = METHOD_MESSAGE.format(method=user["method"], shortener=user["base_site"])
-        return await m.reply(s, reply_markup=METHOD_REPLY_MARKUP)
-    elif len(cmd) == 2:
-        method = cmd[1]
-        if method not in ["profitlinks", "profitlinks", "shortener"]:
-            return await m.reply(METHOD_MESSAGE.format(method=user["method"]))
-        await update_user_info(user_id, {"method": method})
-        await m.reply(f"Method updated successfully to {method}")
-
 
 @Client.on_message(filters.command("restart") & filters.user(ADMINS) & filters.private)
 @private_use
@@ -192,21 +163,7 @@ async def log_file(bot, message):
         await message.reply(str(e))
 
 
-@Client.on_message(filters.command("mdisk_api") & filters.private)
-@private_use
-async def mdisk_api_handler(bot, message: Message):
-    user_id = message.from_user.id
-    user = await get_user(user_id)
-    cmd = message.command
-    if len(cmd) == 1:
-        return await message.reply(MDISK_API_MESSAGE.format(user["mdisk_api"]))
-    elif len(cmd) == 2:
-        api = cmd[1].strip()
-        await update_user_info(user_id, {"mdisk_api": api})
-        await message.reply(f"Mdisk API updated successfully to {api}")
-
-
-@Client.on_message(filters.command("shortener_api") & filters.private)
+@Client.on_message(filters.command("api") & filters.private)
 @private_use
 async def shortener_api_handler(bot, m: Message):
     user_id = m.from_user.id
@@ -318,24 +275,6 @@ async def banner_image_handler(bot, m: Message):
 
             else:
                 return await m.reply_text("Image URL is Invalid")
-
-
-@Client.on_message(filters.command("base_site") & filters.private)
-@private_use
-async def base_site_handler(bot, m: Message):
-    user_id = m.from_user.id
-    user = await get_user(user_id)
-    cmd = m.command
-    site = user["base_site"]
-    text = f"`/base_site (base_site)`\n\nCurrent base site: {site}\n\n EX: `/base_site profitlinks.in`\n\nAvailable base sites:\n{avl_web1}\nAnd All alternate sites to profitlinks.in"
-    if len(cmd) == 1:
-        return await m.reply(text=text, disable_web_page_preview=True)
-    elif len(cmd) == 2:
-        base_site = cmd[1].strip()
-        if not domain(base_site):
-            return await m.reply(text=text, disable_web_page_preview=True)
-        await update_user_info(user_id, {"base_site": base_site})
-        await m.reply("Base Site updated successfully")
 
 
 @Client.on_message(filters.command("me") & filters.private)
