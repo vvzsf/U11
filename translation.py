@@ -1,13 +1,13 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 BATCH_MESSAGE = BATCH = """
-Need to shorten or convert links from all of your channel's posts? I've got you covered! Just make me an admin in your channel and use the following command:
+**Need to shorten or convert links from all of your channel's posts? I've got you covered! Just make me an admin in your channel and use the following command:**
 
-<code>/batch [channel id or username]</code>
+**<code>/batch [channel id or username]</code>**
 
-For example: <code>/batch -100xxx</code>
+**For example: <code>/batch -100xxx</code>**
 
-I'll handle the rest and get those links shortened or converted in a short time! 💪
+**I'll handle the rest and get those links shortened or converted in a short time! 💪**
 """
 
 METHOD_MESSAGE = """
