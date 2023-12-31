@@ -83,6 +83,21 @@ async def help_command(c, m: Message):
         )
     await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
+@Client.on_message(filters.command("method") & filters.private)
+@private_use
+async def method_handler(c: Client, m: Message):
+    user_id = m.from_user.id
+    user = await get_user(user_id)
+    cmd = m.command
+    if len(cmd) == 1:
+        s = METHOD_MESSAGE.format(method=user["method"], shortener=user["base_site"])
+        return await m.reply(s, reply_markup=METHOD_REPLY_MARKUP)
+    elif len(cmd) == 2:
+        method = cmd[1]
+        if method not in ["mdisk", "mdlink", "shortener"]:
+            return await m.reply(METHOD_MESSAGE.format(method=user["method"]))
+        await update_user_info(user_id, {"method": method})
+        await m.reply(f"Method updated successfully to {method}")
 
 @Client.on_message(filters.command("about"))
 @private_use
