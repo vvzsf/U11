@@ -1,86 +1,69 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+START_MESSAGE = '''**Hi, {}**
+**I Am Urlshortx.com, Bulk Link Converter. I Can Convert Links Directly From Your urlshortx.com Account.**
+**
+1. Go To 👉 https://urlshortx.com/member/tools/api
 
-BATCH_MESSAGE = BATCH = """
-**Need to shorten or convert links from all of your channel's posts? I've got you covered! Just make me an admin in your channel and use the following command:**
+2. Then Copy API Key
 
-**<code>/batch [channel id or username]</code>**
+3. Then long press /api command then paste your API Key (see example to understand more...)**
 
-**For example: <code>/batch -100xxx</code>**
+**/api Your API Key 
+(See Example.👇)
+Example:** `/api de303d5270f481aec92j8h9883da7b7f9a8812ac `
 
-**I'll handle the rest and get those links shortened or converted in a short time! 💪**
+**➕ Hit 👉 /Header To add your custom header on this bot.To remove `/header remove`**
+
+**💁‍♀️ Hit 👉 /Api To add your api token.**
+
+**➕ Hit 👉 /footer To add your custom footer on this bot.To remove `/footer remove`**
+
+**Contact Bot Developer** 👉 **@Arisu_0007 (For Shornter Bots)**
+'''
+
+HELP_MESSAGE = """**Hi, {}**
+A bot to short link support bulk link conversion. I can convert links directly from your urlshortx account.
+    
+1. Go To 👉 https://urlshortx.com/member/tools/api
+2. Then Copy API Key
+3. Then long press /api command then paste your API Key (see example to understand more...)
+
+**/api Your API Key 
+(See Example.👇)
+Example:** `/api de303d5270f481aec92j8h9883da7b7f9a8812ac `
+
+**➕ Hit** 👉 /features To know more features of this bot.
+**💁‍♀️ Hit** 👉 /help To get help.
+**➕ Hit** 👉 /footer Adding your custom footer to bot.
+
+**Contact Bot Developer** 👉 **@Arisu_0007 (For Shornter Bots)**
 """
 
-START_MESSAGE = """**Hi there {}**
+ABOUT_TEXT = '''**Hey! My name is {firstname}.**
 
-**I Am Profitlinks.in , Bulk Link Converter. I Can Convert Links Directly From Your Profitlinks.in Account,**
+**⚡Features⚡**
 
-**1. Set Frist 👉**  `/base_site profitlinks.in`
-**2. Go To 👉 https://profitlinks.in/member/tools/api**
-**3. Than Copy API Key**
-**4. Than Type /shortener_api than give a single space and than paste your API Key (see example to understand more, !! Example :-**
-`/shortener_api ef87489673b3bc8928b971316fda002ab626f8d3` **)**
+• I can **Convert any** links or posts to your **urlshortx** link / post. (Button Links Posts, Hidden links/Hyperlinks All Are Supported)
 
-**🔗 Hit 👉 /link To Know More About How To Link profitlinks.in Account To This Bot**
-**➕ Hit 👉 /help To Get Help.**
-**➕ Hit 👉 /footer To Get Help About Adding your Custom Footer to bot.**
+• I Can **auto** add custom **footer text** to your every post. Hit 👉 /footer To know more...
 
-**- Made With 🤍 & Repors Issues By @profitlinks_admin -**"""
+• I Can **auto** add custom **Header text** to your every post. Hit 👉 /header To know more...
 
-HELP_MESSAGE = """**Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.**
+• I Can **Automatically Replace** Your **Banner** Image To images in the post. Hit  👉/banner_image To Know More... 
 
-**I have a ton of handy features to help you out, such as:**
+• **No** need to share **password or email** to convert links.**
 
-**- [Profitlinks](https://t.me/{Profitlinks7}) support 🔗**
-**- Button conversion support 🔘
-**- Domain inclusion and exclusion options 🌐
-**- Header and footer text support 📝
-**- Replace username function 📎
-**- Banner image support 🖼️
-**- Batch conversion for channel admins only 📊
-**- Channel support for admins only 📢**
+ **Contact Bot Developer** 👉 **@Arisu_0007 (For Shornter Bots)**
 
+**Click On Custom Alias To Create Custom Link**
+'''
 
-**- Made With 🤍 & Repors Issues By @profitlinks_admin -**
-
-**Useful commands:**
-
-**- /start: Start me up! You probably already used this.**
-**- /help: Send this message; I'll tell you more about myself!**
-**- /batch -100xxx: To shorten or convert all posts in your channel**"""
-
-ABOUT_TEXT = """
-**My Details:**
-
-`🤖 Name:` ** {} **
-    
-`📝 Language:` [Python 3](https://www.python.org/)
-`🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-`👨‍💻 Developer:` [Dev](t.me/profitlinks_admin)
-`📢 Support:` [Updates](https://t.me/profitlinks7)
-`🌐 Source Code:` [TG](t.me/PyroDEVBot)
-"""
-
-
-METHOD_MESSAGE = """
-**Current Method: {method}**
-    
-**Methods Available:**
-
-**> `profitlinks` - Change all the links of the post to your PDisk account first and then short to {shortener} link.**
-
-**> `shortener` - Short all the links of the post to {shortener} link directly.****
-
-**> `profitlinks` - Save all the links of the post to your Pdisk account.**
-    
-**Select Shortener Method 👆 To change method, choose it from the following options:**
-"""
-
-CUSTOM_ALIAS_MESSAGE = """For custom alias, `[link] | [custom_alias]`, Send in this format
+CUSTOM_ALIAS_MESSAGE = """For Custom Alias, `[link] | [custom_alias]`, Send in this format
 
 This feature works only in private mode only
 
-Ex: https://t.me/example | Example"""
+Ex: https://t.me/PanindiaFilmZ | PanindiaFilmZ"""
 
 
 ADMINS_MESSAGE = """
@@ -89,191 +72,109 @@ List of Admins who has access to this Bot
 {admin_list}
 """
 
+ABOUT_TEXT_REPLY_MARKUP = InlineKeyboardMarkup([
 
-CHANNELS_LIST_MESSAGE = """
-Here is a list of the channels:
-
-{channels}"""
-
-
-HELP_REPLY_MARKUP = InlineKeyboardMarkup(
     [
-        [
-            InlineKeyboardButton("Methods", callback_data="method_command"),
-            InlineKeyboardButton("Batch", callback_data="cbatch_command"),
-        ],
-        [
-            InlineKeyboardButton("Custom Alias", callback_data="alias_conf"),
-            InlineKeyboardButton("Admins", callback_data="admins_list"),
-        ],
-        [
-            InlineKeyboardButton("Channels", callback_data="channels_list"),
-            InlineKeyboardButton("Home", callback_data="start_command"),
-        ],
-    ]
-)
+        InlineKeyboardButton('Custom Alias', callback_data=f'alias_conf')
+        
+    ],
 
 
-ABOUT_REPLY_MARKUP = InlineKeyboardMarkup(
+])
+
+HELP_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup([
+
     [
-        [
-            InlineKeyboardButton("Home", callback_data="start_command"),
-            InlineKeyboardButton("Help", callback_data="help_command"),
-        ],
-        [InlineKeyboardButton("Close", callback_data="delete")],
-    ]
-)
+        InlineKeyboardButton('More Features', callback_data=f'about_command')
+        
+    ],
 
-START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
+
+])
+
+START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
     [
-        [
-            InlineKeyboardButton("ᴊᴏɪɴ ꜰᴏʀ ʟᴀᴛᴇꜱᴛ ᴜᴘᴅᴀᴛᴇꜱ", url="https://t.me/profitlinks7"),
-            InlineKeyboardButton("ɢᴇᴛ ᴀᴘɪ ᴋᴇʏ", url="https://profitlinks.in/member/tools/api"),
-        ],
-        [
-            InlineKeyboardButton("ʀᴇᴘᴏʀᴛ ɪꜱꜱᴜᴇꜱ ᴛᴏ ᴀᴅᴍɪɴ", url="https://t.me/profitlinks_admin"),
-            InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ꜱᴇᴛ ᴀᴘɪ ᴋᴇʏ", url="https://t.me/TechProfitlinks/8"),
-        ],
+        InlineKeyboardButton('Get Api', url=f'https://urlshortx.com/member/tools/api')
     ]
-)
+])
 
-METHOD_REPLY_MARKUP = InlineKeyboardMarkup(
+
+
+BACK_REPLY_MARKUP = InlineKeyboardMarkup([
     [
-        [
-            InlineKeyboardButton(
-                "profitlinks", callback_data="change_method#mdlink"
-            ),
-            InlineKeyboardButton(
-                "Shortener", callback_data="change_method#shortener"
-            ),
-            InlineKeyboardButton("profitlinks", callback_data="change_method#mdisk"),
-        ],
-        [
-            InlineKeyboardButton("Back", callback_data="help_command"),
-            InlineKeyboardButton("Close", callback_data="delete"),
-        ],
-    ]
-)
+        InlineKeyboardButton('Back', callback_data=f'about_command')
+    ],
 
-BACK_REPLY_MARKUP = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("Back", callback_data="help_command")]]
-)
+])
 
 USER_ABOUT_MESSAGE = """
-🔧 Here are the current settings for this bot:
+- Website: [{base_site}](https://urlshortx.com/member/tools/api)
 
-- 🌐 Shortener website: {profitlinks.in}
+- Site Link {base_site} Current Linked API: {shortener_api}
 
-- 🧰 Method: {method}
+- Replace Channel Username: @{username}
 
-- 🔌 {base_site} API: {shortener_api}
-
-- 💾 profitlinks API: {profitlinks_api}
-
-- 📎 Username: @{username}
-
-- 📝 Header text:
+- Header Text: 
 {header_text}
 
-- 📝 Footer text:
+- Footer Text: 
 {footer_text}
 
-🖼️ Banner image: {banner_image}
+- Banner Image: {banner_image}
 """
 
-
-PROFITLINKS_API_MESSAGE = """To add or update your profitlinks API, \n`/profitlinks_api profitlinks_api`
-            
-Ex: `/profitlinks_api 6LZq851sXoPHugiKQq`
-            
-Others Mdisk Links will be automatically changed to the API of this profitlinks account
-
-Get your profitlinks API from profitlinks.in
-
-Current profitlinks API: `{}`"""
 
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
-`/shortener_api [api]`
+`/api [Your API Token]`
             
-Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
+Ex: `/api de303d5270f481aec928hug883da7b7f9a8812ac `
 
-Current Website: {profitlinks.in}
+Get API From [{base_site}](https://urlshortx.com/member/tools/api)
 
-To change your Shortener Website: /base_site
+Website: `{base_site}`
 
-Current Shortener API: `{shortener_api}`"""
+Current API: `{shortener_api}`"""
 
-HEADER_MESSAGE = """**📝 To set the header text for every message caption or text, just reply with the text you want to use. You can use \\n to add a line break.**
+HEADER_MESSAGE = """**Reply to the Header Text You Want**
 
-**🗑 To remove the header text, use the following command:**
+This Text will be added to the top of every message **caption** or text
 
-`/header remove`
+For adding **line break** use \n
+To Remove Header Text: `/header remove`"""
 
-**This is a helpful way to add a consistent header to all of your messages. Enjoy! 🎉**"""
+FOOTER_MESSAGE = """**Reply to the Footer Text You Want**
 
-FOOTER_MESSAGE = """**📝 To set the footer text for every message caption or text, just reply with the text you want to use. You can use \\n to add a line break.**
+This Text will be added to the **bottom** of every message **caption** or text
 
-**🗑 To remove the footer text, use the following command:**
+For adding **line break** use \n
+To Remove Footer Text: `/footer remove`"""
 
-`/footer remove`
+USERNAME_TEXT = """**Hi! {}, I am Urlshortx bot, bulk link converter bot From Linked Your Urlshortx Account,**
 
-**This is a helpful way to add a consistent footer to all of your messages. Enjoy! 🎉**"""
+**🌟 Type** /channel (channel link or username)
 
-USERNAME_TEXT = """Current username: {username}
+**example:**
+/channel @PanindiaFilmZ
+Or
+/channel PanindiaFilmZ
 
-To set the username that will be automatically replaced with other usernames in the post, use the following command:
+**🤘 Hit** 👉 /features To Know More Features Of This Bot.
 
-`/username your_username`
-
-__(Note: Do not include the @ symbol in your username.)__
-
-To remove the current username, use the following command:
-
-`/username remove`
-
-This is a helpful way to make sure that all of your posts have a consistent username. Enjoy! 📎"""
+**- Message @Arisu_0007 For More Help -**"""
 
 BANNER_IMAGE = """
-**Usage:** `/banner_image image_url` **or reply to any Image with this command**
+**Usage:** `/banner_image image_url` or reply to any Image with this command
 
-**This image will be automatically replaced with other images in the post**
+This image will be automatically replaced with other images in the post
 
-**To remove custom image,** `/banner_image remove`
+To remove custom image, `/banner_image remove`
 
-**Eg: ** `/banner_image https://www.nicepng.com/png/detail/436-4369539_movie-logo-film.png`"""
+Eg: `/banner_image https://telegra.ph/file/5e96340a9147026556b387a.jpg`"""
 
-INCLUDE_DOMAIN_TEXT = """
-Use this option if you want to short only links from the following domains list.
-
-Current Include Domain:
-{}
-Usage: /include_domain domain
-Ex: `/include_domain t.me, stack.com`
-
-To remove a domain,
-Ex: `/include_domain remove t.me`
-
-To remove all domains,
-Ex: `/include_domain remove_all`
-"""
-
-EXCLUDE_DOMAIN_TEXT = """
-Use this option if you wish to short every link on your channel but exclude only the links from the following domains list
-
-Current Exclude Domains:
-{}
-Usage: /exclude_domain domain
-Ex: `/exclude_domain t.me, google.com`
-
-To remove a domain, 
-Ex: `/exclude_domain remove t.me`
-
-To remove all domains,
-Ex: `/exclude_domain remove_all`
-"""
 
 BANNED_USER_TXT = """
 Usage: `/ban [User ID]`
+
 Usage: `/unban [User ID]`
 
 List of users that are banned:
