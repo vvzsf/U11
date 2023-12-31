@@ -12,13 +12,13 @@ async def get_user(user_id):
     if not user:
         res = {
             "user_id": user_id,
-            "method": "profitlinks.in",
+            "method": "MdiskPro",
             "shortener_api": None,
-            "profitlinks_api": None,
+            "mdisk_api": None,
             "header_text": "",
             "footer_text": "",
             "username": None,
-            "base_site": "profitlinks.in",
+            "base_site": "urlshortx.com",
             "banner_image": None,
             "is_banner_image": True,
             "is_username": True,
