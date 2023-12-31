@@ -15,6 +15,7 @@ from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMa
 from translation import (
     BACK_REPLY_MARKUP,
     BATCH_MESSAGE,
+    METHOD_REPLY_MARKUP,
     CUSTOM_ALIAS_MESSAGE,
     HELP_MESSAGE,
     START_MESSAGE,
