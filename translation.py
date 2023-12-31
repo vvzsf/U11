@@ -24,6 +24,24 @@ Methods Available:
 To change method, choose it from the following options:
 """
 
+METHOD_REPLY_MARKUP = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton(
+                "MDLINK", callback_data="change_method#mdlink"
+            ),
+            InlineKeyboardButton(
+                "Shortener", callback_data="change_method#shortener"
+            ),
+            InlineKeyboardButton("Mdisk", callback_data="change_method#mdisk"),
+        ],
+        [
+            InlineKeyboardButton("Back", callback_data="help_command"),
+            InlineKeyboardButton("Close", callback_data="delete"),
+        ],
+    ]
+)
+
 START_MESSAGE = '''**Hi, {}**
 **I Am Urlshortx.com, Bulk Link Converter. I Can Convert Links Directly From Your urlshortx.com Account.**
 **
