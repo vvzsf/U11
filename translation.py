@@ -10,6 +10,20 @@ For example: <code>/batch -100xxx</code>
 I'll handle the rest and get those links shortened or converted in a short time! 💪
 """
 
+METHOD_MESSAGE = """
+Current Method: {method}
+    
+Methods Available:
+
+> `mdlink` - Change all the links of the post to your MDisk account first and then short to {shortener} link.
+
+> `shortener` - Short all the links of the post to {shortener} link directly.
+
+> `mdisk` - Save all the links of the post to your Mdisk account.
+    
+To change method, choose it from the following options:
+"""
+
 START_MESSAGE = '''**Hi, {}**
 **I Am Urlshortx.com, Bulk Link Converter. I Can Convert Links Directly From Your urlshortx.com Account.**
 **
