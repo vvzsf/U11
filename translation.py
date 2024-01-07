@@ -136,7 +136,7 @@ HELP_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup([
 
 START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton('Get Api', url=f'https://urlshortx.com/member/tools/api')
+        InlineKeyboardButton('ɢᴇᴛ ᴀᴘɪ', url=f'https://urlshortx.com/member/tools/api')
     ]
 ])
 
