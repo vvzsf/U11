@@ -380,12 +380,12 @@ async def create_server():
 async def set_commands(app):
     COMMANDS = [
         BotCommand("start", "Start For Own Earnings ✳️."),
-        BotCommand("api", "Set Urlshortx API ✨."),
-        BotCommand("header", "Set Header Text 🖍️."),
-        BotCommand("footer", "Set Footer Text 🖌️."),
-        BotCommand("me", "Know About You 🚶."),
-        BotCommand("banner_image", "Set Banner Image 📸."),
-        BotCommand("broadcast", "Admin Only 📣."),
+        BotCommand("api", "Set Urlshortx API ✨"),
+        BotCommand("header", "Set Header Text 🖍️"),
+        BotCommand("footer", "Set Footer Text 🖌️"),
+        BotCommand("me", "Know About You 🚶"),
+        BotCommand("banner_image", "Set Banner Image 📸"),
+        BotCommand("broadcast", "Admin Only 📣"),
     ]
 
     await app.set_bot_commands(COMMANDS)
