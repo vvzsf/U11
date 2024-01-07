@@ -354,12 +354,12 @@ async def user_api_check(user):
             return "\n\nSet your /profitlinks_api to continue..."
     elif user_method == "shortener":
         if not user["shortener_api"]:
-            return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['base_site']}"
+            return f"\n\nSet your /Api to continue...\nCurrent Website {user['base_site']}"
     elif user_method == "profitlinks":
         if not user["profitlinks_api"]:
             return "\n\nSet your /profitlinks_api to continue..."
         if not user["shortener_api"]:
-            return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['base_site']}"
+            return f"\n\nSet your /Api to continue...\nCurrent Website {user['base_site']}"
     else:
         return "\n\nSet your /method first"
     return True
@@ -379,7 +379,7 @@ async def create_server():
 
 async def set_commands(app):
     COMMANDS = [
-        BotCommand("start", "Start For Own Earnings ✳️."),
+        BotCommand("start", "Start For Own Earnings ✳️"),
         BotCommand("api", "Set Urlshortx API ✨"),
         BotCommand("header", "Set Header Text 🖍️"),
         BotCommand("footer", "Set Footer Text 🖌️"),
