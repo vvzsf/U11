@@ -94,9 +94,6 @@ db = mongo_client.get_database()
 # Initialize Shortzy
 shortzy = Shortzy()
 
-# Initialize Shortzy
-shortzy = Shortzy()
-
 # Define account check route
 async def account_check(request: Request) -> Response:
     email = request.headers.get("Email")
