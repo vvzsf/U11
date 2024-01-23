@@ -1,6 +1,5 @@
 from pyrogram import Client, filters
 import os
-from pybypass import PyBypass
 from dotenv import load_dotenv
 import aiohttp
 import contextlib
@@ -87,11 +86,6 @@ async def help_command(c, m: Message):
             photo=WELCOME_IMAGE, caption=s, reply_markup=HELP_REPLY_MARKUP
         )
     await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
-
-load_dotenv()
-
-# Initialize PyBypass
-pybypass = PyBypass()
 
 # Initialize MongoDB connection
 mongo_client = AsyncIOMotorClient(os.getenv("MONGODB_URI"))
