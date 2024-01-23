@@ -86,26 +86,26 @@ async def help_command(c, m: Message):
 # Command to check earnings
 @Client.on_message(filters.command("earnings") & filters.private)
 @private_use
-async def cmd_earnings(_, c: Client, m: message):
+async def cmd_earnings(_, m: Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
-    cmd = m.command
+
     try:
         # Assuming the message format is "/earnings <email> <user_id> <api_key>"
-        _, email, user_id, api_key = message.text.split()
+        _, email, user_id, api_key = m.command
 
         # Perform account check
         account_data = await account_check(email, user_id, api_key)
 
         # Send the account details
-        await message.reply(
+        await m.reply(
             f"Account Details:\nEmail: {account_data.get('Email')}\nUser Id: {account_data.get('User Id')}\n"
             f"API Key: {account_data.get('API Key')}\nPublisher Earnings: {account_data.get('Publisher Earnings')}\n"
             f"Referral Earnings: {account_data.get('Referral Earnings')}"
         )
     except ValueError:
-        await message.reply("Invalid command format. Use /earnings <email> <user_id> <api_key>")
-
+        await m.reply("Invalid command format. Use /earnings <email> <user_id> <api_key>")
+        
 @Client.on_message(filters.command("method") & filters.private)
 @private_use
 async def method_handler(c: Client, m: Message):
