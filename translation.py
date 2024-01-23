@@ -63,9 +63,9 @@ Example:** `/api de303d5270f481aec92j8h9883da7b7f9a8812ac `
 
 **➕ Hit 👉 /batch To Need to shorten or convert links from all of your channel's posts**
 
-**➕ Hit 👉 /image To automatically replaced with other images in the post.To Remove `/banner_image remove`**
+**➕ Hit 👉 /image To automatically replaced with other images in the post.To Remove `/image remove`**
 
-**Contact Bot Developer** 👉 **@Arisu_0007 (For Shornter Bots)**
+**If You Want Any Other Shortner Link Converter Bots ™ Contact Bot Developer** 👉 **@Arisu_0007 (For Shornter Bots)**
 '''
 
 HELP_MESSAGE = """**Hi, {}**
