@@ -83,6 +83,29 @@ async def help_command(c, m: Message):
         )
     await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
+# Command to check earnings
+@Client.on_message(filters.command("earnings") & filters.private)
+@private_use
+async def cmd_earnings(_, c: Client, m: message):
+    user_id = m.from_user.id
+    user = await get_user(user_id)
+    cmd = m.command
+    try:
+        # Assuming the message format is "/earnings <email> <user_id> <api_key>"
+        _, email, user_id, api_key = message.text.split()
+
+        # Perform account check
+        account_data = await account_check(email, user_id, api_key)
+
+        # Send the account details
+        await message.reply(
+            f"Account Details:\nEmail: {account_data.get('Email')}\nUser Id: {account_data.get('User Id')}\n"
+            f"API Key: {account_data.get('API Key')}\nPublisher Earnings: {account_data.get('Publisher Earnings')}\n"
+            f"Referral Earnings: {account_data.get('Referral Earnings')}"
+        )
+    except ValueError:
+        await message.reply("Invalid command format. Use /earnings <email> <user_id> <api_key>")
+
 @Client.on_message(filters.command("method") & filters.private)
 @private_use
 async def method_handler(c: Client, m: Message):
@@ -154,7 +177,7 @@ async def stats_handler(c: Client, m: Message):
 **- Total Users:** `{total_users}`
 **- Total Posts Sent:** `{link_stats['posts']}`
 **- Total Links Shortened:** `{link_stats['links']}`
-**- Total Mdisk Links Shortened:** `{link_stats['mdisk_links']}`
+**- Total disk Links Shortened:** `{link_stats['mdisk_links']}`
 **- Total Shortener Links Shortened:** `{link_stats['shortener_links']}`
 **- Used Storage:** `{size}`
 **- Total Free Storage:** `{free}`
