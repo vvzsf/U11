@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 import os
-from pybypass import PyBypass
+import PyBypass
 from dotenv import load_dotenv
 import aiohttp
 import contextlib
