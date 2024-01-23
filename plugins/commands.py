@@ -20,7 +20,7 @@ from utils import extract_link, get_me_button, get_size
 
 logger = logging.getLogger(__name__)
 
-user_commands = ["Api", "header", "footer", "username", "banner_image", "me"]
+user_commands = ["Api", "header", "footer", "username", "image", "me"]
 avl_web = [
     "droplink.co",
     "gplinks.in",
@@ -258,7 +258,7 @@ async def username_handler(bot, m: Message):
             await m.reply(f"Username updated successfully to {username}")
 
 
-@Client.on_message(filters.command("banner_image") & filters.private)
+@Client.on_message(filters.command("image") & filters.private)
 @private_use
 async def banner_image_handler(bot, m: Message):
     user_id = m.from_user.id
