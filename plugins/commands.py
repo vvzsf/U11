@@ -1,9 +1,3 @@
-import aiohttp
-from aiohttp import web
-from aiohttp.web import Request, Response
-from pyrogram import Client, filters
-import os
-from dotenv import load_dotenv
 import contextlib
 import datetime
 import logging
@@ -89,39 +83,6 @@ async def help_command(c, m: Message):
         )
     await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
-# Define account check route
-async def account_check(request: Request) -> Response:
-    email = request.headers.get("Email")
-    user_id = request.headers.get("User-Id")
-    api_key = request.headers.get("Api-Key")
-
-    # Perform account validation and check earnings logic
-    # ...
-
-    # Sample response
-    return web.json_response({
-        "Email": email,
-        "User Id": user_id,
-        "API Key": api_key,
-        "Publisher Earnings": 100.00,  # Replace with actual earnings logic
-        "Referral Earnings": 50.00  # Replace with actual earnings logic
-    })
-
-# Integrate the earnings check logic into an existing command
-@Client.on_message(filters.command("earnings"))
-async def check_earnings(client: Client, message: Message):
-    # Fetch user data (email, user_id, api_key) from the message or database
-    # ...
-
-    # Make a request to the account check endpoint
-    async with aiohttp.ClientSession() as session:
-        headers = {"Email": email, "User-Id": user_id, "Api-Key": api_key}
-        async with session.get("http://urlshortx.com/account", headers=headers) as resp:
-            data = await resp.json()
-
-    # Send the earnings details to the user
-    await message.reply_text(f"Your Earnings:\n{data}")
-
 @Client.on_message(filters.command("method") & filters.private)
 @private_use
 async def method_handler(c: Client, m: Message):
@@ -193,7 +154,7 @@ async def stats_handler(c: Client, m: Message):
 **- Total Users:** `{total_users}`
 **- Total Posts Sent:** `{link_stats['posts']}`
 **- Total Links Shortened:** `{link_stats['links']}`
-**- Total disk Links Shortened:** `{link_stats['mdisk_links']}`
+**- Total Mdisk Links Shortened:** `{link_stats['mdisk_links']}`
 **- Total Shortener Links Shortened:** `{link_stats['shortener_links']}`
 **- Used Storage:** `{size}`
 **- Total Free Storage:** `{free}`
