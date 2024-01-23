@@ -94,6 +94,9 @@ async def cmd_earnings(_, m: Message):
         # Assuming the message format is "/earnings <email> <user_id> <api_key>"
         _, email, user_id, api_key = m.command
 
+        # Print extracted values for debugging
+        print(f"Email: {email}, User ID: {user_id}, API Key: {api_key}")
+
         # Perform account check
         account_data = await account_check(email, user_id, api_key)
 
@@ -104,8 +107,9 @@ async def cmd_earnings(_, m: Message):
             f"Referral Earnings: {account_data.get('Referral Earnings')}"
         )
     except ValueError:
+        print(f"Error: {e}")
         await m.reply("Invalid command format. Use /earnings <email> <user_id> <api_key>")
-        
+
 @Client.on_message(filters.command("method") & filters.private)
 @private_use
 async def method_handler(c: Client, m: Message):
