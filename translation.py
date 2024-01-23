@@ -63,7 +63,7 @@ Example:** `/api de303d5270f481aec92j8h9883da7b7f9a8812ac `
 
 **➕ Hit 👉 /batch To Need to shorten or convert links from all of your channel's posts**
 
-**➕ Hit 👉 /banner_image To automatically replaced with other images in the post.To Remove `/banner_image remove`**
+**➕ Hit 👉 /image To automatically replaced with other images in the post.To Remove `/banner_image remove`**
 
 **Contact Bot Developer** 👉 **@Arisu_0007 (For Shornter Bots)**
 '''
@@ -209,13 +209,13 @@ Or
 **- Message @Arisu_0007 For More Help -**"""
 
 BANNER_IMAGE = """
-**Usage:** `/banner_image image_url` **or reply to any Image with this command**
+**Usage:** `/image image_url` **or reply to any Image with this command**
 
 **This image will be automatically replaced with other images in the post**
 
-**To remove custom image,** `/banner_image remove`
+**To remove custom image,** `/image remove`
 
-**Eg:** `/banner_image https://telegra.ph/file/5e96340a9147026556b387a.jpg`"""
+**Eg:** `/image https://telegra.ph/file/5e96340a9147026556b387a.jpg`"""
 
 
 BANNED_USER_TXT = """
