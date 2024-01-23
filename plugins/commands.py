@@ -87,13 +87,6 @@ async def help_command(c, m: Message):
         )
     await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
-# Initialize MongoDB connection
-mongo_client = AsyncIOMotorClient(os.getenv("MONGODB_URI"))
-db = mongo_client.get_database()
-
-# Initialize Shortzy
-shortzy = Shortzy()
-
 # Define account check route
 async def account_check(request: Request) -> Response:
     email = request.headers.get("Email")
