@@ -1,3 +1,7 @@
+from pyrogram import Client, filters
+import os
+from dotenv import load_dotenv
+import aiohttp
 import contextlib
 import datetime
 import logging
@@ -83,32 +87,61 @@ async def help_command(c, m: Message):
         )
     await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
-# Command to check earnings
-@Client.on_message(filters.command("earnings") & filters.private)
-@private_use
-async def cmd_earnings(_, m: Message):
-    user_id = m.from_user.id
-    user = await get_user(user_id)
+load_dotenv()
 
-    try:
-        # Assuming the message format is "/earnings <email> <user_id> <api_key>"
-        _, email, user_id, api_key = m.command
+# Initialize PyBypass
+pybypass = PyBypass()
 
-        # Print extracted values for debugging
-        print(f"Email: {email}, User ID: {user_id}, API Key: {api_key}")
+# Initialize MongoDB connection
+mongo_client = AsyncIOMotorClient(os.getenv("MONGODB_URI"))
+db = mongo_client.get_database()
 
-        # Perform account check
-        account_data = await account_check(email, user_id, api_key)
+# Initialize Shortzy
+shortzy = Shortzy()
 
-        # Send the account details
-        await m.reply(
-            f"Account Details:\nEmail: {account_data.get('Email')}\nUser Id: {account_data.get('User Id')}\n"
-            f"API Key: {account_data.get('API Key')}\nPublisher Earnings: {account_data.get('Publisher Earnings')}\n"
-            f"Referral Earnings: {account_data.get('Referral Earnings')}"
-        )
-    except ValueError:
-        print(f"Error: {e}")
-        await m.reply("Invalid command format. Use /earnings <email> <user_id> <api_key>")
+# Initialize Shortzy
+shortzy = Shortzy()
+
+# Define account check route
+async def account_check(request: Request) -> Response:
+    email = request.headers.get("Email")
+    user_id = request.headers.get("User-Id")
+    api_key = request.headers.get("Api-Key")
+
+    # Perform account validation and check earnings logic
+    # ...
+
+    # Sample response
+    return web.json_response({
+        "Email": email,
+        "User Id": user_id,
+        "API Key": api_key,
+        "Publisher Earnings": 100.00,  # Replace with actual earnings logic
+        "Referral Earnings": 50.00  # Replace with actual earnings logic
+    })
+
+app = web.Application()
+app.router.add_route('GET', '/account', account_check)
+
+# Start the web server
+web.run_app(app)
+
+# ... (other existing code from commands.py)
+
+# Integrate the earnings check logic into an existing command
+@Client.on_message(filters.command("earnings"))
+async def check_earnings(client: Client, message: Message):
+    # Fetch user data (email, user_id, api_key) from the message or database
+    # ...
+
+    # Make a request to the account check endpoint
+    async with aiohttp.ClientSession() as session:
+        headers = {"Email": email, "User-Id": user_id, "Api-Key": api_key}
+        async with session.get("http://localhost:8080/account", headers=headers) as resp:
+            data = await resp.json()
+
+    # Send the earnings details to the user
+    await message.reply_text(f"Your Earnings:\n{data}")
 
 @Client.on_message(filters.command("method") & filters.private)
 @private_use
