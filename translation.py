@@ -67,8 +67,7 @@ Example:** `/api de303d5270f481aec92j8h9883da7b7f9a8812ac `
 
 **If You Want Any Other Shortner Link Converter Bots ™ Contact Bot Developer** 👉 **@Arisu_0007 (For Shornter Bots)**
 
-Message @Arisu_0007 For More Help -
-
+**Message @Arisu_0007 For More Help -**
 '''
 
 HELP_MESSAGE = """**Hi, {}**
