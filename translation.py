@@ -55,11 +55,15 @@ START_MESSAGE = '''**Hi, {}**
 (See Example.👇)
 Example:** `/api de303d5270f481aec92j8h9883da7b7f9a8812ac `
 
-**➕ Hit 👉 /Header To add your custom header on this bot.To remove `/header remove`**
+**➕ Hit 👉 /header To add your custom header on this bot.To remove `/header remove`**
 
-**💁‍♀️ Hit 👉 /Api To add your api token.**
+**💁‍♀️ Hit 👉 /api To add your api token.**
 
 **➕ Hit 👉 /footer To add your custom footer on this bot.To remove `/footer remove`**
+
+**➕ Hit 👉 /batch To Need to shorten or convert links from all of your channel's posts**
+
+**➕ Hit 👉 /banner_image To automatically replaced with other images in the post.To Remove `/banner_image remove`**
 
 **Contact Bot Developer** 👉 **@Arisu_0007 (For Shornter Bots)**
 '''
