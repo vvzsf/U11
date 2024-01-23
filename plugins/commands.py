@@ -107,14 +107,6 @@ async def account_check(request: Request) -> Response:
         "Referral Earnings": 50.00  # Replace with actual earnings logic
     })
 
-app = web.Application()
-app.router.add_route('GET', '/account', account_check)
-
-# Start the web server
-web.run_app(app)
-
-# ... (other existing code from commands.py)
-
 # Integrate the earnings check logic into an existing command
 @Client.on_message(filters.command("earnings"))
 async def check_earnings(client: Client, message: Message):
@@ -124,7 +116,7 @@ async def check_earnings(client: Client, message: Message):
     # Make a request to the account check endpoint
     async with aiohttp.ClientSession() as session:
         headers = {"Email": email, "User-Id": user_id, "Api-Key": api_key}
-        async with session.get("http://localhost:8080/account", headers=headers) as resp:
+        async with session.get("http://urlshortx.com/account", headers=headers) as resp:
             data = await resp.json()
 
     # Send the earnings details to the user
